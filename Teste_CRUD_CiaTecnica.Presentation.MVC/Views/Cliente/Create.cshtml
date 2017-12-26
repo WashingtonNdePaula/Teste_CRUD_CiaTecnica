@@ -1,0 +1,48 @@
+﻿@model Teste_CRUD_CiaTecnica.Presentation.MVC.ViewModels.ClienteViewModel
+
+@{
+    ViewBag.Title = "Criar";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Criar Cliente</h2>
+
+
+@using (Html.BeginForm("Create", "Cliente", FormMethod.Post, new { id="formCliente"}))
+{
+    @Html.AntiForgeryToken()
+
+    <div class="form-horizontal">
+        <hr />
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+        
+        <div class="form-group">
+            <div class="col-md-12">
+                @Html.LabelFor(model => model.ClienteTipoPessoa, htmlAttributes: new { @class = "control-label" })
+                @Html.RadioButtonFor(model => model.ClienteTipoPessoa, "Física", htmlAttributes: new { @checked = "checked", @id = "pf"})
+                @Html.Label("pf", " Pessoa Física ")
+                @Html.RadioButtonFor(model => model.ClienteTipoPessoa, "Jurídica", htmlAttributes: new { @id = "pj" })
+                @Html.Label("pj", " Pessoa Jurídica ")
+            </div>
+        </div>
+        <div id="divCliente">
+                @(Model.ClienteTipoPessoa == "Física" ? Html.Partial("_PessoaFisica", Model) : Html.Partial("_PessoaJuridica", Model))
+                @Html.Partial("_Pessoa", Model)
+        </div>
+        <div class="form-group">
+            <div class="col-md-10">
+                <input type="button" value="Salvar" class="btn btn-default" id="salvar" />
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-md-10">
+                @Html.ActionLink("Voltar à Lista", "Index")
+            </div>
+        </div>
+    </div>
+}
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+    @Scripts.Render("~/bundles/Mascaras")
+    <script src="~/Scripts/cliente.js" type="text/javascript"></script>
+}

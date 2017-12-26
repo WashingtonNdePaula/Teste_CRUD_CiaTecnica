@@ -1,0 +1,14 @@
+﻿@model Teste_CRUD_CiaTecnica.Presentation.MVC.ViewModels.PessoaViewModel
+<dt>
+    Endereço:
+</dt>
+
+<dd>
+    @Model.Logradouro, @Model.Numero  @Model.Complemento
+    <br />
+    @Model.Bairro
+    <br />
+    @Model.Cidade  -  @Model.UF
+    <br />
+    @String.Format("{0:00000-000}", int.Parse(Model.CEP))
+</dd>

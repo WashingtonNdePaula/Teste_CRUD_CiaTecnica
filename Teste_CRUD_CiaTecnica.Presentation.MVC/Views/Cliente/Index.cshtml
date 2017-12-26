@@ -1,0 +1,69 @@
+﻿@model IEnumerable<Teste_CRUD_CiaTecnica.Presentation.MVC.ViewModels.PessoaViewModel>
+
+@{
+    ViewBag.Title = "Clientes";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<div class="col-md-12 col-lg-12 col-sm-12">
+    <div class="panel panel-primary list-panel" id="list-panel">
+        <div class="panel-heading list-panel-heading text-center">
+            <h1 class="panel-title">@ViewBag.Title</h1>
+        </div>
+        <div class="panel-body">
+            <p>
+                @Html.ActionLink("Adicionar Novo Cliente", "Create")
+            </p>
+            <table id="assets-data-table" class="table table-striped table-bordered" cellspacing="0" style="width:100%">
+                <thead class="bg-primary">
+                    <tr>
+                        <th>
+                            Nome / Nome Fantasia
+                        </th>
+                        <th>
+                            Cidade / UF
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.TipoPessoa)
+                        </th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var item in Model)
+                    {
+                        <tr>
+                            <td>
+                                @(item.TipoPessoa == "Física" ? item.Nome + "  " + item.PessoaFisica.Sobrenome : item.PessoaJuridica.NomeFantasia)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Cidade) / @Html.DisplayFor(modelItem => item.UF)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.TipoPessoa)
+                            </td>
+                            <td>
+                                @Html.ActionLink("Editar", "Edit", new { id = item.PessoaId }) |
+                                @Html.ActionLink("Detalhes", "Details", new { id = item.PessoaId }) |
+                                @Html.ActionLink("Excluir", "Delete", new { id = item.PessoaId })
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+@section scripts
+    {
+    <script type="text/javascript">
+        $(document).ready(function () {
+
+            $('#assets-data-table').DataTable({
+                "language": {
+                    url: "/Scripts/datatable-pt.json"
+                },
+                "scrollX": true
+            });
+        });
+    </script>
+}

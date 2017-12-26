@@ -1,0 +1,24 @@
+﻿{
+  "decimal": ",",
+  "emptyTable": "Nenhum dados acessível na tabela",
+  "info": "Exibindo página _PAGE_ de _PAGES_",
+  "infoEmpty": "Nenhum registro acessível",
+  "infoFiltered": "(Filtrado a partir de _MAX_ registros)",
+  "infoPostFix": "",
+  "thousands": ".",
+  "lengthMenu": "Mostrar _MENU_ registros por páginas",
+  "loadingRecords": "Lendo...",
+  "processing": "Processando...",
+  "search": "Localizar:",
+  "zeroRecords": "Nenhum registro",
+  "paginate": {
+    "first": "Primeiro",
+    "last": "Último",
+    "next": "Próximo",
+    "previous": "Anterior"
+  },
+  "aria": {
+    "sortAscending": ": Ativar para classificar coluna ascendente",
+    "sortDescending": ": Ativar para classificar coluna descendente"
+  }
+}

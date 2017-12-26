@@ -1,0 +1,49 @@
+﻿@model Teste_CRUD_CiaTecnica.Presentation.MVC.ViewModels.PessoaFisicaViewModel
+
+@{
+    ViewBag.Title = "DetailsPF";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Cliente</h2>
+
+<div>
+    <h4>Pessoa Física</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.CPF)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CPF)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DataNascimento)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DataNascimento)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Pessoa.Nome)
+        </dt>
+        
+        <dd>
+            @Html.DisplayFor(model => model.Pessoa.Nome)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Sobrenome)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Sobrenome)
+        </dd>
+        @Html.Partial("_DetailsPessoa", Model.Pessoa)
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Editar", "Edit", new { id = Model.PessoaId }) |
+    @Html.ActionLink("Voltar à Lista", "Index")
+</p>

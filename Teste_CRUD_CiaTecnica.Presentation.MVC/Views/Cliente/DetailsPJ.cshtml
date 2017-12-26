@@ -1,0 +1,36 @@
+﻿@model Teste_CRUD_CiaTecnica.Presentation.MVC.ViewModels.PessoaJuridicaViewModel
+
+<div>
+    <h4>Pessoa Jurídica</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.CNPJ)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CNPJ)
+        </dd>
+
+        <dt>
+            Razão Social:
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Pessoa.Nome)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NomeFantasia)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NomeFantasia)
+        </dd>
+        @Html.Partial("_DetailsPessoa", Model.Pessoa)
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Editar", "Edit", new { id = Model.PessoaId }) |
+    @Html.ActionLink("Voltar à Lista", "Index")
+</p>

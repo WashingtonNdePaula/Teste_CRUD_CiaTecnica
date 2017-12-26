@@ -3,8 +3,67 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
 VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "0 - Presentation", "0 - Presentation", "{C702FB1B-1A5E-493C-AE6F-24859F639349}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1 - Services", "1 - Services", "{41E25F46-345A-4B5F-8A90-7D35D7C30D5C}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "2 - Application", "2 - Application", "{3DE1A158-3BF1-44EA-8B17-E6CB1981DB77}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "3 - Domain", "3 - Domain", "{5ECFA814-4043-4BF5-940C-443F7604D138}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "4 - Infra", "4 - Infra", "{D8BA71D1-602C-4ABB-A6C3-77F6A30BB25D}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "4.1 - Data", "4.1 - Data", "{C22358E8-1BFE-4993-9F9D-0E3D68140E69}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "4.2 - CrossCuting", "4.2 - CrossCuting", "{EB411071-009C-450C-ABEE-A9AB68F82A2C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Teste_CRUD_CiaTecnica.Domain", "Teste_CRUD_CiaTecnica.Domain\Teste_CRUD_CiaTecnica.Domain.csproj", "{5120489F-DE9F-4554-ABA9-C98B60262F87}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Teste_CRUD_CiaTecnica.Infra.Data", "Teste_CRUD_CiaTecnica.Infra.Data\Teste_CRUD_CiaTecnica.Infra.Data.csproj", "{CB074361-84A1-47F4-9E45-541898C59ECD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Teste_CRUD_CiaTecnica.Infra.CrossCuting.IoC", "Teste_CRUD_CiaTecnica.Infra.CrossCuting.IoC\Teste_CRUD_CiaTecnica.Infra.CrossCuting.IoC.csproj", "{0E8242C8-35F8-4FAA-A363-5FD87F478817}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Teste_CRUD_CiaTecnica.Application", "Teste_CRUD_CiaTecnica.Application\Teste_CRUD_CiaTecnica.Application.csproj", "{3640CE8D-54CD-4F03-9A59-221BA913175C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Teste_CRUD_CiaTecnica.Presentation.MVC", "Teste_CRUD_CiaTecnica.Presentation.MVC\Teste_CRUD_CiaTecnica.Presentation.MVC.csproj", "{C5F61E18-ED6E-4D1A-97A7-33C8C2A98D4D}"
+EndProject
 Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{5120489F-DE9F-4554-ABA9-C98B60262F87}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5120489F-DE9F-4554-ABA9-C98B60262F87}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5120489F-DE9F-4554-ABA9-C98B60262F87}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5120489F-DE9F-4554-ABA9-C98B60262F87}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CB074361-84A1-47F4-9E45-541898C59ECD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CB074361-84A1-47F4-9E45-541898C59ECD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CB074361-84A1-47F4-9E45-541898C59ECD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CB074361-84A1-47F4-9E45-541898C59ECD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0E8242C8-35F8-4FAA-A363-5FD87F478817}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0E8242C8-35F8-4FAA-A363-5FD87F478817}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0E8242C8-35F8-4FAA-A363-5FD87F478817}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0E8242C8-35F8-4FAA-A363-5FD87F478817}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3640CE8D-54CD-4F03-9A59-221BA913175C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3640CE8D-54CD-4F03-9A59-221BA913175C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3640CE8D-54CD-4F03-9A59-221BA913175C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3640CE8D-54CD-4F03-9A59-221BA913175C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C5F61E18-ED6E-4D1A-97A7-33C8C2A98D4D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C5F61E18-ED6E-4D1A-97A7-33C8C2A98D4D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C5F61E18-ED6E-4D1A-97A7-33C8C2A98D4D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C5F61E18-ED6E-4D1A-97A7-33C8C2A98D4D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{C22358E8-1BFE-4993-9F9D-0E3D68140E69} = {D8BA71D1-602C-4ABB-A6C3-77F6A30BB25D}
+		{EB411071-009C-450C-ABEE-A9AB68F82A2C} = {D8BA71D1-602C-4ABB-A6C3-77F6A30BB25D}
+		{5120489F-DE9F-4554-ABA9-C98B60262F87} = {5ECFA814-4043-4BF5-940C-443F7604D138}
+		{CB074361-84A1-47F4-9E45-541898C59ECD} = {C22358E8-1BFE-4993-9F9D-0E3D68140E69}
+		{0E8242C8-35F8-4FAA-A363-5FD87F478817} = {EB411071-009C-450C-ABEE-A9AB68F82A2C}
+		{3640CE8D-54CD-4F03-9A59-221BA913175C} = {3DE1A158-3BF1-44EA-8B17-E6CB1981DB77}
+		{C5F61E18-ED6E-4D1A-97A7-33C8C2A98D4D} = {C702FB1B-1A5E-493C-AE6F-24859F639349}
 	EndGlobalSection
 EndGlobal

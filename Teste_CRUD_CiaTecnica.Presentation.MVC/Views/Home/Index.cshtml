@@ -1,0 +1,22 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+<div class="jumbotron">
+    <h1>CRUD CiaTécnica</h1>
+    <p class="lead">Cadastro de cliente (CRUD) que pode ser utilizado para clientes Pessoa Física ou Pessoa Jurídica.</p>
+    <p>Utilizei o padrão de modelagem DDD, na camada de apresentação foi utilizado o padrão MVC, com MVVM, EntityFramework, AutoMapper, com técnicas de SOLID.</p>
+</div>
+
+<div class="row">
+    <div class="col-md-6">
+        <h2>Preenchimento de endereço automático</h2>
+        <p>
+            Para o preenchimento de endereço a partir do CEP, foi utilizado o WebService dos Correios
+        </p>
+    </div>
+    <div class="col-md-6">
+        <h2>API de consulta de clientes cadastrados</h2>
+        <p>/api/Pessoa - retornará um Json, com uma lista de Objetos do tipo Pessoa</p>
+    </div>
+</div>
